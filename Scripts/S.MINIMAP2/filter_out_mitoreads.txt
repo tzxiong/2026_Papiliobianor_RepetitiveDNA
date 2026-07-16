@@ -1,0 +1,5 @@
+# use the following commands to generate a list of reads to keep. Then use seqtk to subseq to those reads
+
+seqkit seq -n your.fastq.gz > all_reads_names.txt
+
+grep -v -x -f reads_to_discard.txt all_reads_names.txt > reads_to_keep.txt
